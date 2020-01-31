@@ -1,11 +1,18 @@
 console.log('App.js is running')
 
-// Pick back up from 11. JSX Expressions
+// Pick back up from 13. ES6 const and let
+
+var app = {
+  title: 'Indecision App',
+  subtitle: 'Where to make decisions',
+  options: ['One', 'Two']
+}
 
 var template = (
   <div>
-    <h1>Indecision App</h1>
-    <p>This is some info</p>
+    <h1>{app.title}</h1>
+    {(app.subtitle && <p>{app.subtitle}</p>)}
+    <p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
     <ol>
       <li>Item One</li>
       <li>Item Two</li>
@@ -13,14 +20,27 @@ var template = (
   </div>
 )
 
+
+var user = {
+  name: 'Donnie',
+  age: '27',
+  location: 'Sewers'
+}
+
+function getLocation(location) {
+  if(location) {
+    return <p>Location: {location}</p>
+  }
+}
+
 var templateTwo = (
   <div>
-    <h1>Chuck</h1>
-    <p>Age: 45</p>
-    <p>Location: Bora Bora</p>
+    <h1>{user.name ? user.name : 'Anonymous'}</h1>
+    {(user.age && user.age >= 18) && <p>Age: {user.age}</p> }
+    {getLocation(user.location)}
   </div>
 )
 
 var appRoot = document.getElementById('app')
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
