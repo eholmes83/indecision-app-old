@@ -1,6 +1,6 @@
 console.log('App.js is running')
 
-// Complete Build it: Visibility Toggle Challenge
+// Complete Build it: Visibility Toggle Challenge COMPLETED!!
 
 const app = {
   title: 'Indecision App',
