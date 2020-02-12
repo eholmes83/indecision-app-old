@@ -1,6 +1,6 @@
 console.log('App.js is running')
 
-// Complete Build it: Visibility Toggle Challenge COMPLETED!!
+// ES6 Classes pt 1
 
 const app = {
   title: 'Indecision App',
