@@ -7,7 +7,7 @@ Resume from 64
 
 Important Commands
 
-1. To run live server, use the public folder to be served up
+1. To run live server, use the npm run dev-server
 2. To run babel commands, use: babel src/playground/es6-arrow-functions.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 Note: You can change the out-file to point to whichever file you want to run from.
